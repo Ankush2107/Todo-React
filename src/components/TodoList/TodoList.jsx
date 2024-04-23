@@ -1,15 +1,11 @@
 import Todo from "../Todo/Todo"
 import "./TodoList.css"
-function TodoList() {
-    const list = [
-        {id: 1, todoData: "todo 1"},
-        {id: 2, todoData: "todo 2"}
-    ]
+function TodoList({ list }) {
   return (
     <div>
-        {list.length > 0 && list.map(todo => <Todo key={todo.id} todoData={todo.todoData} />)}
+        {list.length > 0 && list.map(t => <Todo key={t.id} todoData={t.todoData} />)}
     </div>
-    
+     
   )
 }
 
